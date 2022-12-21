@@ -1,19 +1,20 @@
 import { Bars3Icon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 import NavLinks from "./NavLinks"
+import SearchBox from "./SearchBox"
 
 function Header() {
   return (
     <header>
         <div className="grid grid-cols-3 p-10 items-center">
             <Bars3Icon className="h-8 w-8 cursor-pointer" />
-            <a href="/">
+            <Link href="/" prefetch={false}>
                 <h1 className="font-serif text-4xl text-center">
                     The{" "}
                     <span className="underline decoration-6 decoration-orange-400">AM</span>
                     {" "}News
                 </h1>
-            </a>
+            </Link>
             
             <div className="flex items-center justify-end space-x-2">
                 {/*Dark Mode Button */}
@@ -23,8 +24,10 @@ function Header() {
                 </button>
             </div>
         </div>
+
         <NavLinks />
-        {/*Search bar*/}
+
+        <SearchBox />
 
     </header>
   )
