@@ -63,6 +63,7 @@ const fetchNews = async (
     console.log(
         "LOADING NEW DATA FROM API for category >>> ",
         category,
+        ", kewords >>>",
         keywords
     )
 
